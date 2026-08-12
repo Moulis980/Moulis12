@@ -1,16 +1,7 @@
 import frappe
 
-
 @frappe.whitelist()
 def get_vehicle_data():
-    """Return Transport records joined with Driver data.
-
-    Demonstrates Frappe Query Builder, Document API, and Database API.
-    """
-
-    # --------------------------------
-    # 1. Query Builder
-    # --------------------------------
 
     Vehicle = frappe.qb.DocType("Transport")
     Driver = frappe.qb.DocType("Driver")
@@ -33,17 +24,10 @@ def get_vehicle_data():
     if not records:
         return []
 
-    # --------------------------------
-    # 2. Document API
-    # --------------------------------
 
     doc = frappe.get_doc("Transport", records[0]["name"])
     doc.status = "Under Maintenance"
     doc.save()
-
-    # --------------------------------
-    # 3. Database API
-    # --------------------------------
 
     for row in records:
         frappe.db.set_value(
@@ -52,9 +36,5 @@ def get_vehicle_data():
             "status",
             "Selected",
         )
-
-    # --------------------------------
-    # 4. Return results
-    # --------------------------------
 
     return records
