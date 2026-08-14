@@ -52,11 +52,3 @@ The endpoint should be tested while logged in to the Frappe site.
   }
 }
 ```
-
-## Concepts Demonstrated
-
-- Whitelisted Frappe API methods
-- Secure record fetching with `frappe.get_list()`
-- Optimized single-value retrieval with `frappe.db.get_value()`
-- Server-side timestamps with `frappe.utils.now()`
-- REST API testing through `/api/method/...`
