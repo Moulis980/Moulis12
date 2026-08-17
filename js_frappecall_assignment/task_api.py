@@ -8,7 +8,7 @@ def create_task(task_subject):
     if not task_subject:
         frappe.throw("Task Subject is required")
 
-    task = frappe.new_doc("Task")
+    task = frappe.new_doc("Transport")
     task.subject = task_subject
     task.save()
 
