@@ -10,7 +10,7 @@
         <div class="panel-body">
             <p>
                 <strong>Selected Vehicle:</strong>
-                <%= filters.vehicle || "All Vehicles" %>
+                {%= filters.vehicle || "All Vehicles" %}
             </p>
         </div>
     </div>
@@ -32,27 +32,27 @@
 
         <tbody>
 
-            <% data.forEach(function(row) { %>
+            {% for(var i=0, l=data.length; i<l; i++) { %}
 
                 <tr>
-                    <td><%= row.vehicle %></td>
-                    <td><%= row.vehicle_type %></td>
-                    <td><%= row.make %></td>
-                    <td><%= row.model %></td>
-                    <td><%= row.purchase_date %></td>
-                    <td><%= row.driver %></td>
-                    <td><%= row.current_odometer %></td>
-                    <td><%= row.status %></td>
+                    <td>{%= data[i].vehicle %}</td>
+                    <td>{%= data[i].vehicle_type %}</td>
+                    <td>{%= data[i].make %}</td>
+                    <td>{%= data[i].model %}</td>
+                    <td>{%= data[i].purchase_date %}</td>
+                    <td>{%= data[i].driver %}</td>
+                    <td>{%= data[i].current_odometer %}</td>
+                    <td>{%= data[i].status %}</td>
                 </tr>
 
-            <% }); %>
+            {% } %}
 
         </tbody>
 
     </table>
 
-    <div class="text-center">
+    <p class="text-center">
         <strong>Vehicle Management System</strong>
-    </div>
+    </p>
 
 </div>
