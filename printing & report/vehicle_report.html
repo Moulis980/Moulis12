@@ -1,0 +1,58 @@
+<div class="container">
+
+    <h2 class="text-center">Vehicle Report</h2>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>Report Information</strong>
+        </div>
+
+        <div class="panel-body">
+            <p>
+                <strong>Selected Vehicle:</strong>
+                <%= filters.vehicle || "All Vehicles" %>
+            </p>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>Vehicle</th>
+                <th>Vehicle Type</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Purchase Date</th>
+                <th>Driver</th>
+                <th>Current Odometer</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <% data.forEach(function(row) { %>
+
+                <tr>
+                    <td><%= row.vehicle %></td>
+                    <td><%= row.vehicle_type %></td>
+                    <td><%= row.make %></td>
+                    <td><%= row.model %></td>
+                    <td><%= row.purchase_date %></td>
+                    <td><%= row.driver %></td>
+                    <td><%= row.current_odometer %></td>
+                    <td><%= row.status %></td>
+                </tr>
+
+            <% }); %>
+
+        </tbody>
+
+    </table>
+
+    <div class="text-center">
+        <strong>Vehicle Management System</strong>
+    </div>
+
+</div>
