@@ -1,9 +1,0 @@
-{
-    "doctype": "Print Format",
-    "name": "My Vehicle Print Format",
-    "doc_type": "Vehicle",
-    "print_format_type": "Jinja",
-    "custom_format": 1,
-    "standard": 1,
-    "html": "<div class=\"container\">\n\n    <h2 class=\"text-center\">Vehicle Details</h2>\n\n    <table class=\"table table-bordered table-striped\">\n        <tr>\n            <th>Vehicle Number</th>\n            <td>{{ doc.vehicle_number }}</td>\n        </tr>\n        <tr>\n            <th>Vehicle Type</th>\n            <td>{{ doc.vehicle_type }}</td>\n        </tr>\n        <tr>\n            <th>Make</th>\n            <td>{{ doc.make }}</td>\n        </tr>\n        <tr>\n            <th>Model</th>\n            <td>{{ doc.model }}</td>\n        </tr>\n        <tr>\n            <th>Purchase Date</th>\n            <td>{{ doc.purchase_date }}</td>\n        </tr>\n        <tr>\n            <th>Driver</th>\n            <td>{{ doc.driver }}</td>\n        </tr>\n        <tr>\n            <th>Current Odometer</th>\n            <td>{{ doc.current_odometer }}</td>\n        </tr>\n        <tr>\n            <th>Status</th>\n            <td>{{ doc.status }}</td>\n        </tr>\n    </table>\n\n</div>"
-}
