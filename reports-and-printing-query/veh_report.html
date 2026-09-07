@@ -1,0 +1,66 @@
+<div class="container">
+
+    <h2 class="text-center">Vehicle Report</h2>
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>Vehicle</th>
+                <th>Vehicle Type</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Purchase Date</th>
+                <th>Driver</th>
+                <th>Current Odometer</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for(var i=0, l=data.length; i<l; i++) { %}
+
+                <tr>
+
+                    <td>
+                        {%= data[i].vehicle %}
+                    </td>
+
+                    <td>
+                        {%= data[i].vehicle_type %}
+                    </td>
+
+                    <td>
+                        {%= data[i].make %}
+                    </td>
+
+                    <td>
+                        {%= data[i].model %}
+                    </td>
+
+                    <td>
+                        {%= frappe.datetime.str_to_user(data[i].purchase_date) %}
+                    </td>
+
+                    <td>
+                        {%= data[i].driver %}
+                    </td>
+
+                    <td>
+                        {%= format_number(data[i].current_odometer, null, 2) %}
+                    </td>
+
+                    <td>
+                        {%= data[i].status %}
+                    </td>
+
+                </tr>
+
+            {% } %}
+
+        </tbody>
+
+    </table>
+
+</div>
