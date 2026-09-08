@@ -1,0 +1,13 @@
+[
+{
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-08 16:11:54.165494",
+  "module": null,
+  "name": "Custom_button",
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tfrm.add_custom_button(\n\t\t    \"Send welcome message\",\n\t\t    function(){\n\t\t        frappe.msgprint(\"Message Sent!\");\n\t\t    },\n\t\t    \"Actions\"\n\t\t    );\n\t}\n});",
+  "view": "Form"
+ }
+]
