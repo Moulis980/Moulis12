@@ -1,0 +1,85 @@
+moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:06 GMT
+Content-Type: application/json
+Content-Length: 40
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:06 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"message":"Hello, Rate Limited World!"}moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:08 GMT
+Content-Type: application/json
+Content-Length: 40
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:08 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"message":"Hello, Rate Limited World!"}moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:09 GMT
+Content-Type: application/json
+Content-Length: 40
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:09 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"message":"Hello, Rate Limited World!"}moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:10 GMT
+Content-Type: application/json
+Content-Length: 40
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:10 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"message":"Hello, Rate Limited World!"}moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:11 GMT
+Content-Type: application/json
+Content-Length: 40
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:11 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"message":"Hello, Rate Limited World!"}moulis@Moulis-Desktop-CSLI8KJ:~/frappe/frappe-bench$ curl -i "http://127.0.0.1:8000/api/method/practice_app.api2.limited_greeting"
+HTTP/1.1 429 TOO MANY REQUESTS
+Server: Werkzeug/3.1.6 Python/3.14.7
+Date: Fri, 11 Sep 2026 08:12:13 GMT
+Content-Type: application/json
+Content-Length: 2447
+Cache-Control: no-store,no-cache,must-revalidate,max-age=0
+Set-Cookie: sid=Guest; Expires=Fri, 18 Sep 2026 10:12:13 GMT; Max-Age=612000; HttpOnly; Path=/; SameSite=Lax
+Set-Cookie: system_user=no; Path=/; SameSite=Lax
+Set-Cookie: full_name=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_id=Guest; Path=/; SameSite=Lax
+Set-Cookie: user_lang=en; Path=/; SameSite=Lax
+Connection: close
+
+{"exception":"frappe.exceptions.RateLimitExceededError: You hit the rate limit because of too many requests. Please try after sometime.","exc_type":"RateLimitExceededError","exc":"[\"Traceback (most recent call last):\\n  File \\\"apps/frappe/frappe/app.py\\\", line 158, in application\\n    response = frappe.api.handle(request)\\n  File \\\"apps/frappe/frappe/api/__init__.py\\\", line 63, in handle\\n    data = endpoint(**arguments)\\n  File \\\"apps/frappe/frappe/api/v1.py\\\", line 41, in handle_rpc_call\\n    return frappe.handler.handle()\\n           ~~~~~~~~~~~~~~~~~~~~~^^\\n  File \\\"apps/frappe/frappe/handler.py\\\", line 53, in handle\\n    data = execute_cmd(cmd)\\n  File \\\"apps/frappe/frappe/handler.py\\\", line 86, in execute_cmd\\n    return frappe.call(method, **frappe.form_dict)\\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"apps/frappe/frappe/__init__.py\\\", line 1147, in call\\n    return fn(*args, **newargs)\\n  File \\\"apps/frappe/frappe/utils/typing_validations.py\\\", line 36, in wrapper\\n    return func(*args, **kwargs)\\n  File \\\"apps/frappe/frappe/rate_limiter.py\\\", line 165, in wrapper\\n    frappe.throw(\\n    ~~~~~~~~~~~~^\\n    \\t_(\\\"You hit the rate limit because of too many requests. Please try after sometime.\\\"),\\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    \\tfrappe.RateLimitExceededError,\\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \\\"apps/frappe/frappe/utils/messages.py\\\", line 159, in throw\\n    msgprint(\\n    ~~~~~~~~^\\n    \\tmsg,\\n     ^^^^\\n    ...<7 lines>...\\n    \\tallow_dangerous_html=allow_dangerous_html,\\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n    )\\n    ^\\n  File \\\"apps/frappe/frappe/utils/messages.py\\\", line 118, in msgprint\\n    _raise_exception()\\n    ~~~~~~~~~~~~~~~~^^\\n  File \\\"apps/frappe/frappe/utils/messages.py\\\", line 59, in _raise_exception\\n    raise exc\\nfrappe.exceptions.RateLimitExceededError: You hit the rate limit because of too many requests. Please try after sometime.\\n\"]","_server_messages":"[\"{\\\"message\\\":\\\"You hit the rate limit because of too many requests. Please try after sometime.\\\",\\\"as_table\\\":false,\\\"title\\\":\\\"Message\\\",\\\"indicator\\\":\\\"red\\\",\\\"raise_exception\\\":1,\\\"__frappe_exc_id\\\":\\\"8f46113a3e0c8801fc99f4b7e6c3c059137b1a231db4afa5ce15481e\\\"}\"]"}
